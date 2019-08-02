@@ -30,3 +30,10 @@ end
 Tag.create(title: Faker::JapaneseMedia::OnePiece.island)
 end
 
+15.times do
+	JoinTableGossipTag.create(gossip: Gossip.all.sample, tag: Tag.all.sample)
+end
+
+10.times do
+	PrivateMessage.create(content: Faker::JapaneseMedia::OnePiece.quote,recipient: User.all.sample,sender: User.all.sample)
+end
